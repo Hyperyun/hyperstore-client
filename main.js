@@ -481,7 +481,7 @@ Hyperyun._Hyperstore.prototype._registerCollectionAfterUnstash = function(op){
   };
 
  function prepareSocketEvents(userinfo){
-    var collectionName = "/"+self.appName+"|"+collection;
+    var collectionName = "/"+self.appName+"~"+collection;
     self.buckets[collectionName] = io(self.server+collectionName);
     self.models = new Array();
     self.buckets[collectionName].on('getChown',function(data){

@@ -6252,7 +6252,7 @@ Hyperyun._Hyperstore.prototype._registerCollectionAfterUnstash = function(op){
   };
 
  function prepareSocketEvents(userinfo){
-    var collectionName = "/"+self.appName+"|"+collection;
+    var collectionName = "/"+self.appName+"~"+collection;
     self.buckets[collectionName] = io(self.server+collectionName);
     self.models = new Array();
     self.buckets[collectionName].on('getChown',function(data){
@@ -33413,7 +33413,7 @@ function plural(ms, n, name) {
 },{}],95:[function(require,module,exports){
 module.exports={
   "name": "hyperyun-hyperstore-client",
-  "version": "1.3.55",
+  "version": "1.3.56",
   "description": "",
   "main": "main.js",
   "scripts": {
